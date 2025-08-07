@@ -1,43 +1,41 @@
-Candidate Recommendation Engine (using streamlit)
+# Candidate Recommendation Engine (using streamlit)
 
-Summary
+### Summary: 
 This project helps recruiters and hiring teams automatically rank uploaded resumes against a given job description, using TF-IDF similarity scoring and AI-powered summarization to highlight top candidates.
 
-Features
+### Features
 - Copy-Paste a job description
 - Upload Multiple resumes (pdf, docx, txt)
 - Rank resume using (TF-IDF cosine similarity, or sentence embeddings based cosine similarity)
+- AI summary of the best candidate
 
+### File Structure
+- app.py
+- df_ai.py
+- extractTextAndBuildCorpus.py
+- sentenceEmbeddingsFunction.py
+- tf_idf_Function.py
 
-File Structure
-1 - app.py
-2 - df_ai.py
-3 - extractTextAndBuildCorpus.py
-4 - sentenceEmbeddingsFunction.py
-5 - tf_idf_Function.py
+### Assumptions
+- The first words in the resume are representing the person's name.
 
-
-Assumptions
-1 - The first words in the resume are representing the person's name.
-
-
-NOTE
+### NOTE
 - There are two types of resume matching in this application
     - one uses tf-idf vectors to calculate cosine.
     - the other uses transformer based sentence enbeddings to calculate cosine.
 
 
-----------------------------------------------
+---
 
-Details
+### Details
 
-----------------------------------------------
+---
 
 
 app.py (App structure)
 - Title
-- Job Description
-- Resume
+- Job Description (Text Box)
+- Resume (Multiple FIle Upload)
 - Slider to choose number of resumes to display
 - Buttons to calculate cosine and display table, followed by an AI summary of the best resume.
 
